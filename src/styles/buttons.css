@@ -1,0 +1,47 @@
+.cv-button {
+  background-color: #00ff99;
+  font-family: "Fira Code", monospace; /* Aplica la fuente también aquí */
+  padding: 10px 20px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+  font-size: 1.1rem;
+}
+
+.cv-button:hover {
+  background-color: #00cc77;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex; /* Alinea los iconos horizontalmente */
+  justify-content: flex-start; /* Alinea los iconos hacia la izquierda */
+}
+
+.social-icons .icon {
+  display: flex;
+  justify-content: center; /* Centra la imagen dentro del círculo */
+  align-items: center; /* Centra la imagen verticalmente */
+  width: 50px; /* Tamaño del círculo */
+  height: 50px; /* Tamaño del círculo */
+  margin-right: 30px; /* Ajusta el espacio entre los iconos */
+  margin-left: 10px; /* Ajusta el espacio entre los iconos */
+  background-color: rgb(222, 69, 120); /* Color lila */
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons .icon img {
+  width: 60%; /* Ajusta el tamaño de la imagen dentro del círculo */
+  height: 60%; /* Ajusta el tamaño de la imagen dentro del círculo */
+  object-fit: contain; /* Mantiene las proporciones de la imagen */
+}
+
+.social-icons .icon:hover {
+  transform: scale(1.2); /* Hace que los iconos crezcan un poco al pasar el mouse */
+}
