@@ -1,0 +1,168 @@
+/* Aplicar la fuente de terminal a todo el contenido */
+body {
+  font-family: "Fira Code", "Courier New", Courier, monospace;
+  color: #00ff99; /* Color verde tipo terminal */
+}
+
+/* Estilo para el contenido */
+.content {
+  flex: 1;
+  margin-left: calc(15vw + 50px); /* 15vw del Sidebar + 50px de margen */
+  padding: 40px;
+  text-align: left;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Estilos generales del header */
+.header {
+  width: 100%;
+  text-align: left;
+}
+
+/* Título principal */
+.header h1 {
+  font-size: 5rem;
+  margin: 0px;
+  font-weight: bold;
+  font-family: "Fira Code", monospace;
+  margin-top: 14vh; /* Alineado con avatar */
+}
+
+
+
+/* Colores personalizados */   
+.victor {
+  color: #ec73f5; /* Lila */
+  font-family: "Fira Code", "Courier New", Courier, monospace;
+
+}
+
+.martin {
+  color: #00ff99; /* Verde */
+  font-family: "Fira Code", "Courier New", Courier, monospace;
+}
+
+/* Estilo para el enlace de correo */
+.email-link {
+  color: #00ff99; /* Verde tipo terminal */
+  text-decoration: underline; /* Hace que el enlace esté subrayado */
+}
+
+.email-link:hover {
+  text-decoration: underline; /* Agrega un subrayado cuando el enlace está en hover */
+}
+
+/* Estilo para los párrafos en azul grisáceo */
+.blue-gray-text {
+  color: #88aeec; /* Azul grisáceo */
+  font-size: 1.1rem;
+  text-align: justify; /* Justificar el texto */
+}
+
+
+.blue-gray-text_title {
+  color: #88aeec; /* Azul grisáceo */
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: 60px;
+
+}
+
+.about-me-text {
+  color: #ec73f5;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.presentacion {
+  font-weight: bold;
+  color: #b38b00; /* Amarillo oscuro */
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 1.1rem;
+  font-family: "Fira Code", monospace; /* Aplica la fuente también aquí */
+  display: inline-block;
+  overflow: hidden; /* Oculta el texto cuando no está escrito */
+  white-space: nowrap; /* Asegura que el texto no haga saltos de línea */
+  animation: typingErasing 15s steps(30, end) infinite;
+  animation-fill-mode: both; /* Mantiene el estado final de las animaciones */
+}
+
+/* Animación de escribir y borrar el texto */
+@keyframes typingErasing {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: 0; /* El texto se borra hasta el 0% */
+  }
+  100% {
+    width: 0; /* Mantiene el texto borrado */
+  }
+}
+
+
+
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .header h1 {
+    font-size: 3rem;
+    margin-bottom: 80px;
+  }
+  .presentacion {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 50px;
+    padding: 20px;
+  }
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+  .presentacion {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    margin-left: 50px;
+    padding: 15px;
+  }
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .presentacion {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Línea divisoria */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #00ff99, transparent);
+  margin-top: 20%;
+  margin-bottom: 10%;
+  border: none;
+}
+
+.divider0 {
+  height: 0px;
+  border: none;
+}

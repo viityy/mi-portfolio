@@ -1,0 +1,134 @@
+/* Sidebar */
+.sidebar {
+  width: 15vw;
+  height: 100vh;
+  background-color: #372a61;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Habilita el scroll vertical */
+  scrollbar-width: thin; /* Reduce el tamaño de la barra en Firefox */
+  scrollbar-color: #ec73f5 #372a61; /* Color de la barra y fondo en Firefox */
+}
+
+/* Scrollbar para navegadores basados en WebKit (Chrome, Safari) */
+.sidebar::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #ec73f5; /* Color del thumb (barra deslizante) */
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #2a2a3e; /* Fondo de la barra */
+}
+
+/* Avatar Responsive */
+.avatar {
+  width: 100%;
+  max-width: 12vw;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin-top: 14vh; /* Alineado con header h1 */
+  margin-bottom: 30px; /* 👈 Añade este margen inferior */
+}
+
+
+/* Ajustes para pantallas medianas */
+@media screen and (max-width: 1024px) {
+  .avatar {
+    max-width: 150px; /* Tamaño fijo en tablets */
+    margin: 10% auto 5% auto;
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .avatar {
+    max-width: 120px;
+    margin: 8% auto 4% auto;
+  }
+}
+
+/* Ajustes para móviles */
+@media screen and (max-width: 480px) {
+  .avatar {
+    max-width: 100px;
+    margin: 5% auto 3% auto;
+  }
+}
+
+/* Menú Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 250px;
+    align-items: flex-start;
+    padding-top: 20px; /* Espacio para el menú */
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .avatar {
+    max-width: 120px;
+    margin: 10% auto 5% auto; /* Ajuste dinámico */
+  }
+}
+
+/* Menú */
+nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ec73f5; /* Lila */
+  display: block;
+  padding: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #a855f7; /* Tono más oscuro de lila */
+}
+
+nav ul li a.active {
+  color: #00ff99; /* Verde cuando se selecciona */
+}
