@@ -82,33 +82,38 @@ body {
   margin-top: 20px;
   margin-bottom: 0px;
   font-size: 1.1rem;
-  font-family: "Fira Code", monospace; /* Aplica la fuente también aquí */
+  font-family: "Fira Code", monospace;
   display: inline-block;
-  overflow: hidden; /* Oculta el texto cuando no está escrito */
-  white-space: nowrap; /* Asegura que el texto no haga saltos de línea */
-  animation: typingErasing 12s steps(40, end) infinite; /* Más lento */
-  animation-fill-mode: both; /* Mantiene el estado final de las animaciones */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingErasing 10s steps(60, end) infinite;
+  animation-fill-mode: both;
+  position: relative;
 }
 
-/* Animación de escribir y borrar el texto */
+/* Cursor de máquina de escribir */
+.presentacion::after {
+  content: "|"; /* Representa el cursor */
+  display: inline-block;
+  margin-left: 2px;
+  opacity: 1;
+  animation: blinkCursor 0.8s infinite;
+}
+
+/* Animación de escribir y borrar con pausas */
 @keyframes typingErasing {
-  0% {
-    width: 0;
-  }
-  25% {
-    width: 100%;
-  }
-  50% {
-    width: 100%;
-  }
-  75% {
-    width: 0; /* El texto se borra hasta el 0% */
-  }
-  100% {
-    width: 0; /* Mantiene el texto borrado */
-  }
+  0% { width: 0; }
+  33% { width: 100%; }
+  50% { width: 100%; }
+  77% { width: 0; }
+  100% { width: 0; }
 }
 
+/* Animación del cursor parpadeante */
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
 
 /* Responsivo */
